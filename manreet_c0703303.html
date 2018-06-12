@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	#h{
+	Border-Radius:60%;
+	border-color:black;
+	border-style: inset;
+	border-style: solid;
+    border-width: 2px 10px 4px 20px;
+	}
+	#p1{
+	font-style:italic;
+	font-size:20px;
+	font-weight:bold;
+	}
+	#img {
+    border-radius: 50%;
+	}
+	body{
+	background-color:pink;
+	}
+	
+	
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+
+
+$(document).ready(function(){
+$("#image").fadeIn(1500).delay(3500).fadeOut(1500);
+		
+		$("#fade").click(function(){
+			$("#h").fadeOut();
+			$("#h").fadeOut("slow");
+			$("#h").fadeOut(4000);
+			});
+			
+			$("#fadein").click(function(){
+			$("#h").fadeIn();
+			$("#h").fadeIn("slow");
+			$("#h").fadeIn(4000);
+			});
+
+	$("#callback").click(function(){
+    $("p").hide("slow", function(){
+        alert("The paragraph is now hidden");
+    });
+});
+   
+	$("#qnim").click(function(){
+	        $("#h").css("color", "red").slideUp(2000).slideDown(2000);
+	    });
+
+	$("#hide").click(function(){
+       		 $("p").hide();
+   			 });
+   		 $("#show").click(function(){
+     			   $("p").show();
+  				  });
+
+			
+   });
+
+</script> 
+	</head>
+<title>Profile</title>
+<body>
+
+<li align="Center">
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="qnim">Animation</button>
+<button id="fade">FadeOut</button>
+<button id="fadein">FadeIn</button>
+<button id="callback">CallBack</button>
+<h1 id="h" style="color:purple;">MANREET KAUR GILL</h1>
+<p id ="p1" style ="color:green;">Student ID =C0703303</p>
+<p>Current Program = Computer Programmer(CPCM)</p>
+<p id ="p2" style= "color: red;"> My hobbies: Dancing, Listening songs, cooking.<br> Belong to faridkot, Punjab,India.
+<br>Good experience within some languages like C, C++, HTML, CSS, Java and Databases like MySQL, Oracle, Access.</p>
+<br><img src="manreet.jpg" width="300px" Height="300px" id="img">
+</LI>
+
+</body>
+</html>
